@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Webpage description goes here" />
+  <meta charset="utf-8">
+  <title>Change_me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+let adUrl="https://api.airfind.com/adPlacement/v1?clientId=50455&placementId=1527&ip=undefined&ua=" + encodeURIComponent(navigator.userAgent) + "&size=300x250";
+$(document).ready(function(){
+$.getJSON(adUrl, function(result){
+$("#airfind-ad").html(result.htmlcode);
+});
+});
+</script>
+</head>
+
+<body>
+  
+<div class="container">
+  Ololo
+</div>
+
+<div id="airfind-ad" style="display:block;"></div>
+
+<script>
+</script>
+
+</body>
+</html>
